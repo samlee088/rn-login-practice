@@ -7,7 +7,6 @@ import FlatButton from "../UI/FlatButton";
 import { useNavigation } from "@react-navigation/native";
 
 function AuthContent({ isLogin, onAuthenticate }) {
-
   const navigation = useNavigation();
   const [credentialsInvalid, setCredentialsInvalid] = useState({
     email: false,
@@ -18,9 +17,9 @@ function AuthContent({ isLogin, onAuthenticate }) {
 
   function switchAuthModeHandler() {
     if (isLogin) {
-      navigation.navigate('Signup');
+      navigation.replace("Signup");
     } else {
-      navigation.navigate('Login');
+      navigation.replace("Login");
     }
   }
 
