@@ -19,8 +19,8 @@ function LoginScreen() {
       Alert.alert(
         "Authentication Failed :( Could not log you in, please check credentials"
       );
+      setIsAuthenticating(false);
     }
-    setIsAuthenticating(false);
   }
 
   if (isAuthenticating) {
